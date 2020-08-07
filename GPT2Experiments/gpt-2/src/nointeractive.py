@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#Adapted for machine teaching experiments
 import fire
 import json
 import os
@@ -8,7 +8,7 @@ import tensorflow as tf
 
 from src import model, sample, encoder
 
-def interact_model(
+def nointeract_model(
     model_name,
     seed,
     nsamples,
@@ -26,7 +26,7 @@ def interact_model(
     ntest
 ):
     """
-    Interactively run the model
+    Non Interactively run the model
     :model_name=124M : String, which model to use
     :seed=None : Integer seed for random number generators, fix seed to reproduce
      results
@@ -94,4 +94,4 @@ def interact_model(
                   
 
 def rungpt2(inputGPT2, nrepeat, filePath, nconcepts, nphases, ntest):
-	interact_model('774M', None, 1, 1, 3, 1, 0, 1, 'models', inputGPT2, nrepeat, filePath, nconcepts, nphases, ntest)
+	nointeract_model('774M', None, 1, 1, 3, 1, 0, 1, 'models', inputGPT2, nrepeat, filePath, nconcepts, nphases, ntest)
