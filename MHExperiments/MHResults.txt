@@ -1,0 +1,62 @@
+C1: o
+
+out_MH_WS -> id
+out_MH_R1 -> take 1
+out_MH_R2 -> take 1
+
+
+C2: >o
+
+out_MH_WS -> drop 1
+out_MH_R1 -> (\a -> drop 1 (take 2 a))
+out_MH_R2 -> (\a -> drop 1 (take 2 a))
+
+
+C3: >+o
+
+out_MH_WS -> (\a -> filter (\_ -> null a) (show 0))
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+C4: o+op
+
+out_MH_WS -> NO RESULT
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+C5: >>>-o
+
+out_MH_WS -> (\a -> filter (\_ -> null a) (show 1))
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+C6: >-[o<] 
+
+out_MH_WS -> NO RESULT
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+
+C7: -[-<]>o
+
+out_MH_WS -> (\a -> foldr (\_ _ -> reverse (drop 1 (reverse a))) (show 0) a)
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+C8: +[>+o<+]
+
+out_MH_WS -> NO RESULT
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
+
+
+C9: -[-[o<-]]
+
+out_MH_WS -> NO RESULT
+out_MH_R1 -> NO RESULT
+out_MH_R2 -> NO RESULT
