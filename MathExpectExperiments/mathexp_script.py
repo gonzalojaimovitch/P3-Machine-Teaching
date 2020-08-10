@@ -8,8 +8,7 @@ def list_frequency(passed_list):
       if num[0] == '':
         num[0]= [i, passed_list.count(i)]
       else:
-        num.append([i, passed_list.count(i)])
-
+        num.append([i, passed_list.count(i)]
   
   return num 
 
