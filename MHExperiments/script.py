@@ -16,7 +16,7 @@ teachingSets1 = [[('111001', '1'), ('110101', '1')],[('01000', '1'), ('01010', '
 teachingSets2 = [[('100110', '1'), ('111100', '1'), ('01010', '0')],[('001', '0'), ('00', '0'), ('1011', '0')],[('010', ''), ('100', '1'), ('011101', '')],[('0001', '011'), ('00', '011'), ('000', '011')],[('11', '1'), ('0001', '0'), ('11100', '')],[('', '1'), ('101', ''), ('000', '')],[('0101', '1'), ('0010', '0'), ('0110', '1')],[('10', ''), ('0100', ''), ('0', '0')],[('10', ''), ('101', ''), ('11', '')]]
 
 
-#The directory MHexperiment keeps 9 folders (1, 2, ..., 9) where the files required for launching MagicHaskeller will be created
+#The directory MHexperiment stores 9 folders (1, 2, ..., 9) where the files required for launching MagicHaskeller will be created
 def createFiles():
   for i in range(0, conceptsNum):
     f = open(path + str(i + 1) + "/in_MH_WS.txt", 'a')
